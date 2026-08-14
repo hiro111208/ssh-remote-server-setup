@@ -1,5 +1,27 @@
 # Requirements
 
-## Functional Requirements
+You are required to setup a remote linux server and configure it to allow SSH connections.
 
-## Non-functional Requirements
+- Register and setup a remote linux server on any provider e.g. a simple droplet on DigitalOcean which gives you $200 in free credits with the link. Alternatively, use AWS or any other provider.
+
+- Create two new SSH key pairs and add them to your server.
+
+- You should be able to connect to your server using both SSH keys.
+
+You should be able to use the following command to connect to your server using both SSH keys.
+
+```bash
+ssh -i <path-to-private-key> user@server-ip
+```
+
+Also, look into setting up the configuration in ~/.ssh/config to allow you to connect to your server using the following command.
+
+```bash
+ssh <alias>
+```
+
+The only outcome of this project is that you should be able to SSH into your server using both SSH keys. Future projects will cover other aspects of server setup and configuration.
+
+Stretch goal: install and configure fail2ban to prevent brute force attacks.
+
+Do not push your private key to any public repository. The solution to this project should just contain one solution.md file with the steps you took to complete the project.
